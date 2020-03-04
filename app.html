@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Punch bag challenge Learnt from the Net Ninja Course</title>
+      <link rel="stylesheet" href="app.css">
+      <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <!-- punch bag  -->
+      <div id="punch-bag" v-bind:class="{rust:ended}"></div>
+      <!-- punch health  -->
+      <div id="punch-health">
+        <div v-bind:class="color" v-bind:style="{width : health + '%'}"></div>
+      </div>
+      <!-- controllers -->
+      <div id="controls">
+        <button @click="restart">Restart</button>
+        <button @click="punch" v-show="!ended">Punch</button>
+      </div>
+
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
